@@ -1,0 +1,36 @@
+/* pages/common/header.wxss */
+.header{
+  padding-top: 35rpx;
+  width: 750rpx ;
+	height: 110rpx;
+	background-color: #4b77e5;
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.header_text{
+  width: 243rpx;
+	height: 39rpx;
+	font-family: ArialMT;
+	font-size: 36rpx;
+	color: #ffffff;
+  margin-left: 20rpx;
+  margin-top: 25rpx;
+}
+
+.nv{
+  width: 40rpx;
+	height: 32rpx;
+  left: 25rpx;
+  top:35rpx;
+  margin-top: 25rpx;
+}
+.btn_back{
+  margin-top: 10rpx;
+  width: 18rpx;
+	height: 32rpx;
+	background-color: transparent;
+  margin-left: 31rpx;
+
+}

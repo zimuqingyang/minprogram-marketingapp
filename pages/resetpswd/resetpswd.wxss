@@ -1,0 +1,74 @@
+/* pages/resetpswd/resetpswd.wxss */@import "../../static/header/header.wxss";
+page{
+  background-color: #ffffff
+}
+
+.root_view{
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.ipt_plhoder{
+  font-family: SourceHanSansCN-Regular;
+	font-size: 32rpx;
+	color: #a2a2a2;
+}
+
+.ipt_long{
+  margin-top: 20rpx;
+  width: 670rpx;
+  height: 94rpx;
+  background-color: #f0f0f0;
+	border-radius: 10rpx;
+  padding-left: 41rpx;
+}
+
+.ipt_thin{
+  width:  420rpx;
+  height: 94rpx;
+   background-color: #f0f0f0;
+	border-radius: 10rpx;
+  padding-left: 41rpx;
+}
+
+.btn_commit{
+  margin-top: 60rpx;  
+  width: 690rpx;
+  height: 94rpx;
+  background-color: #4b77e4;
+  color: #ffffff;
+  border-radius: 10rpx;
+}
+
+.ipt_pan{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 94rpx;
+  margin-top: 20rpx;
+}
+
+.tv_view{
+  width: 200rpx;
+  height: 94rpx;
+  margin-left: 40rpx;
+  background-color: #cdd9f8;
+  display: flex;
+}
+
+.iv_show_msg{
+  width: 200rpx;
+  height: 94rpx;
+  font-size: 32rpx;
+	color: #4b77e5;
+}
+
+.tv_show_msg{
+  padding-top: 20rpx;
+  padding-left: 20rpx;
+  width: 200rpx;
+  height: 94rpx;
+  font-size: 32rpx;
+	color: #4b77e5;
+}

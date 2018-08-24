@@ -1,0 +1,22 @@
+<!--pages/mysetting/aboutus/aboutus.wxml-->
+<import src="../../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+<view class='root_view'>
+  
+  <view class='border_line'></view>
+
+  <view class="list_view" wx:for="{{list_data}}">
+    <navigator style="width:100%;" url='/pages/mysetting/aboutus/versiondetails/versiondetails?versionid={{item.name}}'>
+      <view class='item_view'>
+        <view class='ite_details' >
+            <text class='tv_name'>版本号：{{item.name}}</text>
+            <text class='tv_date'>时间：{{item.date}}</text>
+        </view>
+        <view class='border_line_thin'></view>
+    
+      </view>
+    </navigator>
+   
+  </view>
+</view>

@@ -1,0 +1,34 @@
+<!--pages/resetpswd/resetpswd.wxml-->
+<import src="../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+<view class='root_view'>
+  <input class='ipt_long' placeholder='请输入手机号' placeholder-class='ipt_plhoder'>
+  </input>
+
+  <view class='ipt_pan'>
+     <input class='ipt_thin' placeholder='请输入图形验证码' placeholder-class='ipt_plhoder'>
+    </input>
+    <view class='tv_view'>
+      <image class='iv_show_msg' src='../../static/images/vcode.png' mode="aspectFit"> </image> 
+    </view>
+  </view>
+
+  <view class='ipt_pan'>
+   <input class='ipt_thin' placeholder='请输入验证码' placeholder-class='ipt_plhoder'>
+  </input>
+  
+    <view class='tv_view'>
+      <text class='tv_show_msg'>获取验证码</text>
+    </view>
+  </view>
+
+
+   <input class='ipt_long' placeholder='请输入新密码' placeholder-class='ipt_plhoder'>
+  </input>
+
+   <input class='ipt_long' placeholder='请再次输入新密码' placeholder-class='ipt_plhoder'>
+  </input>
+
+   <button class='btn_commit'>确定</button>
+</view>

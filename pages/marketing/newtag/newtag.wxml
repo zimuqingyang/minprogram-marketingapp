@@ -1,0 +1,15 @@
+<!--pages/marketing/newtime/newtime.wxml-->
+<!-- 新增标签，进入本页 -->
+<view class='root_view'>
+  <import src="../../../static/header/header.wxml"/>
+  <template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+  <view class='content_view'>
+    <!-- 标签名称 -->
+    <view class='first_row'>
+      <text class='tv_title'>标签名称</text>
+      <input class='tv_input'></input>
+    </view>
+  </view>
+ <button class='btn_commit'>确定</button>
+</view>

@@ -1,0 +1,75 @@
+/* pages/mysetting/wallet/wallet.wxss */
+@import "../../../static/header/header.wxss";
+
+.root_view{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  
+}
+.border_line{
+  width: 100%;
+  height: 23rpx;
+  background-color: #f5f5f5;
+}
+.border_line_thin{
+  width: 100%;
+  height: 2.85rpx;
+  background-color: #f5f5f5;
+}
+
+.banner_view{
+  position: relative;
+  width: 100%;
+  height: 280rpx;
+}
+
+.iv_banner{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 270rpx;
+}
+
+.content_view{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+}
+
+.first_row{
+  width: 100%;
+  height: 50rpx;
+  padding-top: 39rpx;
+  padding-bottom: 39rpx;
+}
+
+.tv_title{
+  width:100%;
+  height: 30rpx;
+}
+
+.tv_money{
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+	height: 47rpx;
+	font-family: ArialMT;
+	font-size: 64rpx;
+	line-height: 40rpx;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+  text-align: center;
+  margin-top: 80rpx;
+}
+.tv_show_msg{
+  margin-top: 158rpx;
+  z-index: 3;
+  position: absolute;
+  width: 100%;
+  font-size: 28rpx;
+  color:#dddbdb;
+  text-align: center; 
+}

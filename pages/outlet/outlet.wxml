@@ -1,0 +1,101 @@
+<!--pages/outlet/outlet.wxml-->
+<import src="../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+<view class='search_container'>
+  <!-- 搜索框 -->
+  <view class='page_row' bindtap="suo">  
+      <view class="search">  
+        <view class="df search_arr">  
+          <icon class="searchcion" size='20' type='search'></icon>  
+          <input class="input_key"  placeholder="请输入门店关键字" value="{{searchValue}}"/>  
+        </view>  
+      </view>  
+  </view>  
+  <view class="page">
+            <!-- 查询结果页 -->
+      <scroll-view class='list_view'>
+            <!--搜索结果 -->
+            <view class='item_view' wx:for="{{outletLists}}" wx:for-item="item" bindtap='show_details'>
+              <navigator url='/pages/outlet/details/details?shopid=0' style='display:flex;flex-direction:row'>
+                <image src='../../static/images/shop_image.png' mode="aspectFit" class='iv_item'></image>
+                <view class='tv_item_msg'>
+                  <view class='tv_outlet_name'>{{item.name}}(编号00001)</view>
+                  <view class='tv_details'>
+                    <view class='tv_totalkeliu'>
+                    <text class='tv_show'>总客流量</text>
+                    <text class='tv_show'>{{item.total_keliu}}</text>
+                    </view>
+                    <view class='tv_cm_keliu'>
+                      <text class='tv_show'>到店流量</text>
+                      <text class='tv_show'>{{item.total_cm_keliu}}</text>
+                    </view>
+                    <view class='tv_rate_keliu'>
+                      <text class='tv_show'>进店量</text>
+                      <text class='tv_show'>{{item.rate_cm}}</text>
+                    </view>
+                  </view>
+                </view>
+              </navigator>
+            </view>
+      </scroll-view>  
+
+      <!-- 四个tab -->
+      <view class="nav">
+          <view class="nav-son {{shownavindex == 1? 'active' : ''}}" bindtap="listqy" data-nav="1">
+              <view class="content">全部区域</view>
+              <view class="icon"></view>
+          </view>
+          <view class="nav-son borders {{shownavindex == 2? 'active' : ''}}" bindtap="list" data-nav="2">
+              <view class="content">到店客流量</view>
+              <view class="icon"></view>
+          </view>
+          <view class="nav-son {{shownavindex == 3? 'active' : ''}}" bindtap="listpx" data-nav="3">
+              <view class="content">进店率</view>
+              <view class="icon"></view>
+          </view>
+          <view class="nav-son {{shownavindex == 3? 'active' : ''}}"  data-nav="3">
+              <view class="content">实时</view>
+              <view class="icon"></view>
+          </view>
+      </view>
+
+         <!-- 区域选择 -->
+        <view class="quyu {{qyopen ? 'slidown' : 'slidup'}} {{qyshow ? 'disappear':''}}">
+            <!-- 省、直辖市 -->
+            <view class="qy quyu-left">
+                <view  class="{{select1 == index ? 'current' : ''}}" wx:for="{{cityleft}}" bindtap="selectleft" data-city='{{index}}'>
+                    {{index}}
+                </view>
+            </view>
+            <!-- 市 -->
+            <view class="qy quyu-center">
+                <view  class="{{select2 == index ? 'current2' : ''}}" wx:for="{{citycenter}}" bindtap="selectcenter" data-city='{{index}}' >
+                    {{index}}
+                </view>
+            </view>
+            <!-- 区、县 -->
+            <view class="qy quyu-right">
+                <view  wx:for="{{cityright}}" bindtap='select_area' data-area="{{item}}">
+                    <text class="tv_city_right" >{{item}}</text>
+                </view>
+            </view>
+        </view>
+        <!-- 到店客流量 -->
+        <view class="temp temp1 {{nzopen ? 'slidown' : 'slidup'}} {{nzshow ? 'disappear':''}}">
+            <view wx:for="{{content}}" data-totalcm="{{item}}" bindtap='select_total_cm'>
+                {{item}}
+            </view>
+        </view>
+        <!-- 进店率 -->
+        <view class="temp temp2 {{pxopen ? 'slidown' : 'slidup'}} {{pxshow ? 'disappear':''}}">
+            <view wx:for="{{content}}" bindtap='select_total_cm_rate' data-totalcmrate="{{item}}">
+                {{item}}
+            </view>
+        </view>
+        <!-- 半透明背景色 -->
+        <view class="fullbg {{isfull ?'fullopacity':''}}" bindtap="hidebg"></view>
+ 
+  </view>
+</view>
+
+

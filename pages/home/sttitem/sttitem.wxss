@@ -1,0 +1,105 @@
+@import "../../../static/header/header.wxss";
+
+page{
+  background-color: #ffffff
+}
+.container {
+  overflow: hidden;
+  transform: rotate(90deg);
+}
+swiper{
+  width: 100%;
+  height: 100%;
+}
+swiper-item{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 60rpx;
+  width: 100%;
+  height: 100%;
+}
+
+.item_view{
+  margin-left: 100rpx;
+  width: 100%;
+  height: 100%;
+}
+.iv_close{
+  width: 32rpx;
+  height: 32rpx;
+  margin-left: 500rpx;
+  margin-top: 20rpx;
+}
+
+
+/* 滑动view */
+.stv-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.withAnimate {
+  transition: all 100ms ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -ms-perspective: 1000;
+  perspective: 1000;
+}
+.stv-container .tab-bar {
+  position: relative;
+  display: flex;
+  font-size: 30rpx;
+  color: #d7d6d6;
+  background-color: #4b77e5;
+}
+.stv-container .tab-bar .tab-active {
+  color: #ffffff;
+  background-color: #4b77e5;
+  
+}
+.stv-container .tab-bar .tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 16rpx;
+  padding-bottom: 20rpx;
+  background-color: #4b77e5;
+  
+}
+.stv-container .tab-bar .under-line {
+  position: absolute;
+  bottom: 0;
+  height: 6rpx;
+  background-color: #ffffff;
+}
+.stv-container .scroll-view {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #e7eaef;
+}
+.stv-container .scroll-view .scroll-view-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+}
+.stv-container .scroll-view .scroll-view-wrapper .one-scene {
+  height: 100%;
+}
+.one-scene text {
+  display: flex;
+  justify-content: center;
+  padding-top: 200rpx;
+}

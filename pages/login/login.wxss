@@ -1,0 +1,119 @@
+/* pages/login/login.wxss */@import "../../static/header/header.wxss";
+
+
+.iv_logo{
+  width: 234rpx;
+	height: 90rpx;
+  margin-top: 60rpx;
+  margin-left: 250rpx;
+}
+.iput_pss_pan{
+  width: 650rpx;
+  height: 234rpx;
+  margin-top: 68rpx;
+  padding-left: 30rpx;
+}
+
+.iput_vercode_pan{
+  width: 650rpx;
+  height: 234rpx;
+  margin-top: 68rpx;
+  padding-left: 30rpx;
+}
+
+.iput_telphone{
+  width: 650rpx;
+  height:94rpx;
+  background-color: #f0f0f0;
+	border-radius: 10rpx;
+  padding-left: 50rpx;
+
+}
+
+.iput_telphone2{
+  width: 650rpx;
+  height:94rpx;
+  background-color: #f0f0f0;
+	border-radius: 10rpx;
+  padding-left: 50rpx;
+  margin-left: 30rpx;
+
+  
+}
+.iput_password_login{
+  padding-left: 50rpx;
+  margin-top: 40rpx;
+  width: 650rpx;
+  height:94rpx;
+  background-color: #f0f0f0;
+	border-radius: 10rpx;
+}
+
+.rl_vcode_view{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 94rpx;
+}
+.tv_get_vcode{
+  margin-top: 42rpx;
+  text-align: center;
+  font-size: 32rpx;
+  width: 200rpx;
+  height: 64rpx;
+  margin-left: 37rpx;
+  background-color: #cdd9f8;
+  border-radius: 10rpx;
+  padding-top: 20rpx;
+  color: #4b77e5;
+
+}
+.iput_vcode_login{
+  padding-left: 50rpx;
+  margin-top: 40rpx;
+  width:410rpx;
+  height:94rpx;
+  background-color: #f0f0f0;
+	border-radius: 10rpx;
+  margin-left: 30rpx;
+  
+}
+
+.ipt_placeholder_style{
+  font-size: 32rpx;
+}
+
+.tv_click{
+  width: 630rpx;
+  height: 60rpx;
+  padding-left: 60rpx;
+  margin-top: 50rpx;
+}
+
+.tv_vcode{
+  width: 50%;
+  height: 100%;
+  text-align: left;
+	font-size: 30rpx;
+	color: #666666;
+}
+
+.tv_forget_psswd{
+  width: 50%;
+  height: 100%;
+  text-align: right;
+	font-size: 30rpx;
+	color: #666666;
+  margin-left: 349rpx;
+}
+
+.btn_login{
+  width:690rpx;
+  height: 94rpx;
+  background-color: #4b77e5;
+  margin-left: 30rpx;
+  margin-right:30rpx;
+  margin-top: 67rpx;
+  color: #ffffff;
+  border-radius: 10rpx;
+}

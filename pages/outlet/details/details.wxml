@@ -1,0 +1,87 @@
+<!--pages/outlet/details/details.wxml-->
+<import src="../../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+<scroll-view class="page_container">
+    <!-- 第一个面板，四个仪表盘 -->
+    <view class="first_pan">
+      <view class="first_pan_row">
+        
+          <view class="view_banner1" >
+            <navigator url="/pages/home/sttitem/sttitem?title=0">
+                <image mode="aspectFit" class="image" src="{{imgUrls[0]}}"></image>
+                <view class='tv_show_msg'>
+                  <text class='tv_details'>{{dashbord_details[0]}}</text>
+                  <text class='tv_title'>{{dashbord_titles[0]}}</text>
+                </view>
+            </navigator>
+          </view>
+          
+          <view class="view_banner2" >
+            <navigator url="/pages/home/sttitem/sttitem?title=1">
+                <image mode="aspectFit" class="image" src="{{imgUrls[1]}}"></image>
+                <view class='tv_show_msg'>
+                  <text class='tv_details'>{{dashbord_details[1]}}</text>
+                  <text class='tv_title'>{{dashbord_titles[1]}}</text>
+                </view>
+            </navigator>
+          </view>
+      </view>
+      <view class="first_pan_row">
+            <view class="view_banner1" >
+              <navigator url="/pages/home/sttitem/sttitem?title=2">
+                <image mode="aspectFit" class="image" src="{{imgUrls[2]}}"></image>
+                  <view class='tv_show_msg'>
+                    <text class='tv_details'>{{dashbord_details[2]}}</text>
+                    <text class='tv_title'>{{dashbord_titles[2]}}</text>
+                  </view>
+                </navigator>
+            </view>
+            <view class="view_banner2" >
+            <navigator url="/pages/home/sttitem/sttitem?title=3">
+              <image mode="aspectFit" class="image" src="{{imgUrls[3]}}"></image>
+                <view class='tv_show_msg'>
+                  <text class='tv_details'>{{dashbord_details[3]}}</text>
+                  <text class='tv_title'>{{dashbord_titles[3]}}</text>
+                </view>
+              </navigator>
+      </view>
+    </view>
+    <!-- 统计 -->
+    <view class="container_preview">
+      <button  class="btn_preview" bindtap='to_sttdetails'>统计概览</button>
+    </view>
+
+    <!-- 第二个面板 到店客流、新顾客、老顾客 -->
+    <view class='two_pan'>
+        <view class='two_pan_row'>  
+            <view class="stv-container">
+              <view class="tab-bar">
+                <view wx:for="{{tabs}}" wx:key="unique" data-index=
+                "{{index}}" bindtap="handlerTabTap" class="tab {{activeTab==index?'tab-active':''}}" style="width: {{stv.windowWidth/tabs.length}}px">
+                  <text>{{item}}</text>
+                </view>
+                <view style="width: {{stv.lineWidth}}px; left: {{stv.offset/tabs.length}}px" class="under-line {{!stv.tStart? 'withAnimate': ''}}"></view>
+              </view>
+              <view class="scroll-view">
+                <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd"  class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">
+                  <view style="width: {{stv.windowWidth}}px;" wx:for="{{tabs}}" class="one-scene">
+                    <!-- tab内容区 显示chart -->
+
+                      <ec-canvas  wx:if="{{index==0}}" class="chart_view" id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ec_0}}"></ec-canvas>
+                      <ec-canvas  wx:elif="{{index==1}}" class="chart_view" id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ec_1}}"></ec-canvas>
+                      <ec-canvas  wx:elif="{{index==2}}" class="chart_view" id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ec_2}}"></ec-canvas>
+                  </view>
+                </view>
+              </view>
+            </view>
+        </view>
+    </view>
+
+    <!--第三个面板， 年龄分布 -->
+    <view class="three_pan">
+        <ec-canvas class="ec-canvas" wx:if="{{!isDisposed}}" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+    </view>
+  </view>
+
+</scroll-view>

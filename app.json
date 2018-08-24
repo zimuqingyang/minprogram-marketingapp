@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/home/sttdetails/sttdetails",
+    "pages/test/test",
+    "pages/home/sttitem/sttitem",
+    "pages/outlet/outlet",
+    "pages/outlet/details/details",
+    "pages/marketing/marketing",
+    "pages/marketing/newmarket/newmarket",
+    "pages/marketing/historymarket/historymarket",
+    "pages/marketing/newtag/newtag",
+    "pages/marketing/taglist/taglist",
+    "pages/marketing/newtime/newtime",
+    "pages/mysetting/mysetting",
+    "pages/mysetting/wallet/wallet",
+    "pages/mysetting/refill/refill",
+    "pages/mysetting/bill/bill",
+    "pages/mysetting/userinfo/userinfo",
+    "pages/mysetting/help/help",
+    "pages/mysetting/aboutus/aboutus",
+    "pages/mysetting/aboutus/versiondetails/versiondetails",
+    "pages/login/login",
+    "pages/resetpswd/resetpswd"
+  ],
+  "window": {
+    "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "backgroundColor": "#fafafa",
+    "borderStyle": "white",
+    "selectedColor": "#b4282d",
+    "color": "#666",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "static/images/index_icon_hover.png",
+        "selectedIconPath": "static/images/index_incon.png"
+      },
+      {
+        "pagePath": "pages/outlet/outlet",
+        "text": "门店",
+        "iconPath": "static/images/shop_icon-.png",
+        "selectedIconPath": "static/images/shop_icon_hover.png"
+      },
+      {
+        "pagePath": "pages/marketing/marketing",
+        "text": "营销",
+        "iconPath": "static/images/marketing_icon-.png",
+        "selectedIconPath": "static/images/marketing_icon_hover.png"
+      },
+      {
+        "pagePath": "pages/mysetting/mysetting",
+        "text": "我的",
+        "iconPath": "static/images/my_icon-.png",
+        "selectedIconPath": "static/images/my_icon_hover.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 20000,
+    "connectSocket": 20000,
+    "uploadFile": 20000,
+    "downloadFile": 20000
+  }
+}

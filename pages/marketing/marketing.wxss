@@ -1,0 +1,311 @@
+/* pages/marketing/marketing.wxss */
+@import "../../static/header/header.wxss";
+
+
+.page{
+    font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'Droid Sans Fallback', 'Microsoft Yahei', sans-serif;
+    height: 1000rpx;
+    background-color: #e6e6e6;
+    overflow: hidden;
+}
+.nav{
+    background-color: #4b77e5;
+    position: relative;
+    z-index: 98;
+    display: flex;
+    border-top: 1px solid #4b77e5;
+    border-bottom: 1px solid #4b77e5;
+    background: #4b77e5;
+}
+.nav-son{
+    background-color: #4b77e5;
+    display: flex;
+    flex: 1;
+    text-align: center;
+    height: 40px;
+    align-items:center;
+    justify-content:center;
+    font-size: 14px;
+}
+.borders{
+    border-left: 1px solid #4b77e5;
+    border-right: 1px solid #4b77e5;
+}
+.content{
+    display: inline-block;
+}
+.icon{
+    display: inline-block;
+    border: 4px solid transparent;
+    border-top: 4px solid #9b9b9b;
+    margin-left: 5px;
+}
+
+.content_area{
+  width: 100%;
+  height: 100%;
+}
+
+.temp{
+    position: relative;
+    z-index: 4;
+}
+/* 到店 下拉框 */
+.temp1{
+    display: none;
+    width: 100%;
+    max-height: 550rpx;
+    overflow-y: scroll;
+    padding: 0 0 0 20rpx;
+    line-height:100rpx;
+    background: #fff;
+}
+/* 进店 下拉框*/
+.temp2{
+    display: none;
+    width: 100%;
+    max-height: 750rpx;
+    overflow-y: scroll;
+    padding: 0 0 0 20rpx;
+    line-height:100rpx;
+    background: #fff;
+}
+.slidedown{
+    transform:  translateY(0%);
+}
+.temp view{
+    border-bottom: 1px solid #d1d3d4;
+    font-size: 14px;
+    color: #666;
+}
+
+/* 全部区域 下拉框 */
+.quyu{
+    position: relative;
+    display: none;
+    height: 450rpx;
+    z-index: 5;
+}
+.quyu .qy{
+    overflow-y: scroll;
+    float: left;
+    width: 33.33%;
+    height: 450rpx;
+    line-height: 80rpx;
+    box-sizing: border-box; 
+    font-size: 14px;
+    color: #717273;
+}
+.qy view{
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space:nowrap;  
+    padding-left: 15rpx; 
+}
+.quyu-left{
+    background: #c5c5c5;
+}
+.quyu-center{
+    background: #e0e0e0;
+}
+.quyu-right{
+    background: #fff;
+}
+.quyu-right view{
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.tv_city_right{
+  width: 100%;
+  height: 100%;
+}
+.current{
+    background: #e0e0e0;
+}
+.current2{
+    background: #fff;
+}
+.fullbg{
+    position: fixed;
+    top:0;
+    margin-top: 262rpx;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgb(1, 1, 1);
+    transition: all 2s;
+    opacity: 0;
+}
+.fullopacity{
+    opacity: .5;
+}
+
+.nav{
+   background-color: #4b77e5;
+    color: #ffffff;
+}
+.nav-son.active .content{
+  background-color: #4b77e5;
+    color: #ffffff
+}
+.nav-son.active .icon{
+    border-bottom: 1px solid #61beff;
+    border-top:0;
+}
+@keyframes slidown{
+    from{
+        transform:  translateY(-100%);
+    }
+    to{
+        transform:  translateY(0%);
+    }
+}
+.slidown{
+    display: block;
+    animation: slidown .7s ease-in both;
+}
+@keyframes slidup{
+    from{
+        transform:  translateY(0%);
+    }
+    to{
+        transform:  translateY(-100%);
+    }
+}
+.slidup{
+    display: block;
+    animation: slidup .7s ease-in both;
+}
+.disappear{
+    display: none;
+}
+/* 搜索栏样式 */
+    .search_arr {  
+      border: 1px solid #4b77e5;  
+      border-radius: 10rpx;  
+      background-color: #4b77e5
+    }  
+    .input_key{  
+      margin-left: 22rpx;
+      margin-right: 122rpx;
+      height: 57rpx;  
+      width: 600rpx;
+      font-size: 24rpx;
+      background-color: #ffffff;
+      border-radius: 29rpx;  
+      padding-left: 25rpx;
+      padding-right: -25rpx;
+      padding-top: 5rpx;
+      padding-bottom: 5rpx;
+
+    }  
+
+    .page_row{  
+      display: flex;  
+      background-color: #4b77e5;
+      flex-direction: row  ;
+      width: 100%;
+      
+    }  
+    .searchcion {  
+      margin: 10rpx 10rpx 10rpx 10rpx;  
+      position: absolute;  
+      right:120rpx;  
+      z-index: 2;  
+      width: 29rpx;  
+      height: 30rpx;  
+      text-align: center;  
+    }  
+   /* 列表布局样式 */
+   .list_view{
+     margin-top: 90rpx;
+      position: absolute;
+      width: 100%;
+       z-index: 2;
+    background-color: #e6e6e6;
+       
+   }
+
+   .item_view{
+     background-color: #ffffff;
+     display: flex;
+     flex-direction: row;
+     padding-left: 25rpx;
+     padding-bottom: 31rpx;
+     padding-right: 25rpx;
+     margin-top: 10rpx;
+     margin-bottom: 10rpx;
+     height: 217rpx;
+     width: 100%;
+
+   }
+   .iv_item{
+     width: 125rpx;
+     height: 140rpx;
+     margin-left: 6rpx;
+     margin-top: 26rpx;
+   }
+
+  .tv_outlet_name{
+    margin-left: 27rpx;
+    font-size: 32rpx;
+  }
+   .tv_item_msg{
+     display: flex;
+     flex-direction: column;
+     margin-left: 31rpx;
+   }
+   .tv_firs_row{
+     display: flex;
+     flex-direction: row;
+   }
+   .tv_second_row{
+     direction: flex;
+     flex-direction: column;
+     margin-top: 27rpx;
+   }
+   
+   .tv_title{
+    font-family: SourceHanSansCN-Regular;
+    margin-top:32rpx;
+    font-size: 32rpx;
+    color: #333333;
+   }
+
+   .tv_time{
+    margin-top: 38rpx;
+    margin-left: 135rpx;
+    height: 30rpx;
+    font-family: SourceHanSansCN-Regular;
+    font-size: 26rpx;
+    color: #999999;
+   }
+
+   .tv_sub_title{
+      font-family: SourceHanSansCN-Regular;
+      font-size: 28rpx;
+      color: #666666;
+   }
+
+   .tv_content{
+      margin-top: 5rpx;
+      width: 532rpx;
+      font-family: SourceHanSansCN-Regular;
+      font-size: 24rpx;
+      color: #666666;
+   }
+
+.search{
+  display: flex;
+  flex-direction: row;
+}
+
+   /* 营销按钮 */
+   .iv_new_marketing{
+      width: 43rpx;
+      height: 42rpx;
+      top:153rpx;
+      right: 33rpx;
+      position: absolute;
+      z-index: 99;
+   }

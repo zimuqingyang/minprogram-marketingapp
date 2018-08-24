@@ -1,0 +1,54 @@
+<!--pages/marketing/newmarket/newmarket.wxml-->
+<import src="../../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+<view class="border_line"></view>
+
+<view class='content_view'>
+  <!-- 目标顾客 -->
+  <view class='first_row'>
+    <text class='tv_title'>目标顾客</text>
+    <input class='tv_input'></input>
+    <navigator url='/pages/marketing/taglist/taglist'>
+      <image class='iv_add' src="{{iv_icon}}" mode='aspectFit'></image> 
+    </navigator>
+  </view>
+  <view class='border_line_thin'></view>
+    <!-- 营销签名 -->
+  <view class='second_row'>
+    <text class='tv_title'>营销签名</text>
+    <input class='tv_input'></input>
+    <navigator url='/pages/marketing/newtag/newtag'>
+      <image class='iv_add' src="{{iv_icon}}" mode='aspectFit'></image> 
+    </navigator>
+
+  </view>
+  <view class='border_line_thin'></view>
+  
+  <!-- 营销内容 -->
+  <view class='third_row'>
+    <text class='tv_title'>营销内容</text>
+    <textarea class='tv_textarea' placeholder="请输入营销内容"></textarea>
+  </view>
+  <!-- 发送时间 -->
+  <view class='forth_row'>
+    <text class='tv_title'>发送时间</text>
+    <image class='iv_time' src="{{iv_time}}" mode='aspectFit'></image> 
+      <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+    <view class="tui-picker-detail">
+       {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}
+    </view>
+  </picker>
+    <navigator url='/pages/marketing/newtime/newtime'>
+      <image class='iv_add' src="{{iv_icon}}" mode='aspectFit'></image> 
+    </navigator>
+
+  </view>
+  <view class='border_line_thin'></view>
+
+</view>
+<view class='btn_view'>
+  <button class='btn_commit'>提交发送</button>
+    <button class='btn_test'>测试发送(本机)</button>
+</view>
+

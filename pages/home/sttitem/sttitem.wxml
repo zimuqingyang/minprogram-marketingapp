@@ -1,0 +1,43 @@
+
+<view class='container' style='width:{{windowHeight}}px;height:{{windowWidth}}px;transform-origin:{{windowWidth / 2}}px' bindtap='onChange'>
+
+<view class="stv-container">
+  <view class="tab-bar">
+      <view wx:for="{{tabs}}" wx:key="unique" data-index="{{index}}" bindtap="handlerTabTap" class="tab {{activeTab==index?'tab-active':''}}" style="width: {{stv.windowWidth/tabs.length}}px">
+        <text>{{item}}</text>
+       
+      </view>
+       <image src='../../../static/images/iv_clear.png'  class="iv_close" mode='aspectFit'></image>
+      <view style="width: {{stv.lineWidth}}px; left: {{stv.offset/tabs.length}}px" class="under-line {{!stv.tStart? 'withAnimate': ''}}">
+      </view>
+  </view>
+
+  <view class="scroll-view">
+    <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd"  class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">
+      <view style="width: {{stv.windowHeight}}px;" wx:for="{{tabs}}" wx:key="unique" class="one-scene">
+        <view wx:if="{{page==0}}" class='item_view' style="width: {{chartWidth}}rpx;height:{{chartHeight}}rpx">
+        <!-- 总客流量 -->
+         <ec-canvas id="mychart-dom-line-user" canvas-id="mychart-line-user" ec="{{ ec_line_user }}" ></ec-canvas>
+
+        </view>
+
+        <view wx:elif="{{page==1}}">
+        <!-- 到店客流量 -->
+        
+        </view>
+         <view wx:elif="{{page==3}}">
+        <!-- 33 -->
+        
+        </view>
+        <view wx:elif="{{page==4}}">
+        <!-- 44 -->
+        
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+
+</view>

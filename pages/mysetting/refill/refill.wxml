@@ -1,0 +1,15 @@
+<!--pages/mysetting/refill/refill.wxml-->
+<import src="../../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+<view class='root_view'>
+  <view class='container_view'>
+    <text class='tv_title'>充值金额</text>
+    <text class='tv_dler'>￥</text>
+    <input class='tv_area'></input>
+  </view>
+  
+  <view class='btn_view'>
+    <button class='btn_refill'>充值</button>
+  </view>
+</view>

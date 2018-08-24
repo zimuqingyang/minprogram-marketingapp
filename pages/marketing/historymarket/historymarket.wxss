@@ -1,0 +1,160 @@
+/* pages/marketing/newmarket/newmarket.wxss */
+@import "../../../static/header/header.wxss";
+
+.list_header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10rpx 20rpx;
+}
+.list_header .h-city {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  line-height: 1.0;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: #a8a8a8;
+}
+.list_header .h-city image {
+  width: 22rpx;
+  height: 27rpx;
+  margin-right: 16rpx;
+}
+
+.list_header .h-close image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.now-city {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: #f2f4f5;
+  font-size: 22rpx;
+	line-height: 1.0;
+	color: #a8a8a8;
+  padding: 18rpx 20rpx;
+  border-bottom: 1rpx solid #dbdbdb;
+}
+.now-city .now-city-name {
+  display: flex;
+  background: white;
+  font-size: 30rpx;
+	line-height: 1.0;
+	letter-spacing: 0.4rpx;
+	color: #333333;
+  padding: 13rpx 33rpx;
+  border: solid 1rpx #dbdbdb;
+  margin-top: 18rpx;
+}
+
+
+.alphabet-list {
+  padding-top: 30rpx;
+  background-color: #ffffff
+}
+.alphabet-list .section-item {
+
+}
+.alphabet-list .section-item .section-item-header {
+  display: flex;
+  align-items: center;
+  font-size: 42rpx;
+	color: #4b77e5;
+  padding: 4rpx 20rpx;
+}
+
+.alphabet-list .section-item .section-item-cells {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+.alphabet-list .section-item .section-item-cells .section-item-cell{
+  margin-right: 50rpx;
+  font-size: 30rpx;
+	line-height: 1.0;
+	color: #333333;
+  padding: 20rpx 0;
+  padding-top: 40rpx;
+}
+.border-bottom {
+  border-bottom: 1rpx solid #dbdbdb;
+}
+.alphanet-selector {
+  position: absolute;
+  top: 140rpx;
+  right: 0;
+  height: 432px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  box-sizing: border-box;
+  margin-top: 140rpx;
+}
+.alphanet-selector .selector-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+	color: #43c1f4;
+  padding: 3px 3px;
+  height: 12px;
+}
+
+/* 顶部搜索栏 */
+
+/* 搜索栏样式 */
+    .search_arr {  
+      border: 1px solid #4b77e5;  
+      border-radius: 10rpx;  
+      background-color: #4b77e5;
+      margin-bottom: 22rpx;
+    }  
+    .input_key{  
+      margin-left: 22rpx;
+      margin-right: 122rpx;
+      height: 57rpx;  
+      width: 530rpx;
+      font-size: 24rpx;
+      background-color: #ffffff;
+      border-radius: 29rpx;  
+      padding-left: 25rpx;
+      padding-right: -25rpx;
+      padding-top: 5rpx;
+      padding-bottom: 5rpx;
+
+    }  
+
+    .page_row{  
+      display: flex;  
+      background-color: #4b77e5;
+      flex-direction: row  ;
+      width: 100%;
+      
+    }  
+    .searchcion {  
+      margin: 10rpx 10rpx 10rpx 10rpx;  
+      position: absolute;  
+      right:210rpx;  
+      z-index: 2;  
+      width: 29rpx;  
+      height: 30rpx;  
+      text-align: center;  
+    }  
+
+  .btn_new_marketing{
+      text-align: center;
+      padding-top: 10rpx;
+      width: 120rpx;
+      height: 58rpx;
+      font-size: 29rpx;
+      top:150rpx;
+      right: 33rpx;
+      position: absolute;
+      z-index: 99;
+      border-radius: 29rpx;  
+      color: #4b77e5;
+      background-color: #ffffff
+  }

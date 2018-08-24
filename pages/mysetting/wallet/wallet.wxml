@@ -1,0 +1,29 @@
+<!--pages/mysetting/wallet/wallet.wxml-->
+<import src="../../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+<view class='root_view'>
+   <view class='banner_view'>
+      <image src='../../../static/images/iv_banner.png' mode='widthFix' class='iv_banner'></image>
+      <text class='tv_money'>￥{{my_money}}</text>
+      <text class='tv_show_msg'>账户余额</text>
+      
+   </view>
+   <view class='border_line'></view>
+
+   <view class='content_view'>
+    <navigator url='/pages/mysetting/bill/bill'>
+      <view class='first_row'>
+          <text class='tv_title'>账单详情</text>
+      </view>
+    </navigator>
+      <view class='border_line_thin'></view>
+
+      <navigator url='/pages/mysetting/refill/refill'>
+        <view class='first_row'>
+            <text class='tv_title'>充值</text>
+        </view>
+      </navigator>
+      
+   </view>
+</view>

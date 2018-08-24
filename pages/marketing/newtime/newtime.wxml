@@ -1,0 +1,29 @@
+<!--pages/marketing/newtag/newtag.wxml-->
+<!-- 新增标签，进入本页 -->
+<view class='root_view'>
+  <import src="../../../static/header/header.wxml"/>
+  <template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+  <view class='content_view'>
+    <!-- 标签名称 -->
+    <view class='first_row'>
+      <text class='tv_title'>标签名称</text>
+      <input class='tv_input'></input>
+      <image class='iv_clear' src="{{iv_icon}}" mode='aspectFit'></image> 
+    </view>
+    <view class='border_line_thin'></view>
+    <!-- 发送时间 -->
+    <view class='forth_row'>
+      <text class='tv_title'>发送时间</text>
+      <image class='iv_time' src="{{iv_time}}" mode='aspectFit'></image> 
+        <picker mode="multiSelector" value="{{dateTime}}" bindchange="changeDateTime" bindcolumnchange="changeDateTimeColumn" range="{{dateTimeArray}}">
+          <view class="tui-picker-detail">
+            {{dateTimeArray[0][dateTime[0]]}}-{{dateTimeArray[1][dateTime[1]]}}-{{dateTimeArray[2][dateTime[2]]}} {{dateTimeArray[3][dateTime[3]]}}:{{dateTimeArray[4][dateTime[4]]}}:{{dateTimeArray[5][dateTime[5]]}}
+          </view>
+        </picker>
+    
+    </view>
+   
+  </view>
+ <button class='btn_commit'>确定</button>
+</view>

@@ -1,0 +1,40 @@
+<!--pages/login/login.wxml-->
+<import src="../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+<view class='root_view'>
+  <view class="content_view">
+    <image class='iv_logo' mode='aspectFit' src='../../static/images/logo@2x.png'></image>
+    <view class='iput_pan'>
+      <!-- 密码登录 -->
+      <view class='iput_pss_pan' wx:if="{{panid==0}}">
+        <input class='iput_telphone' placeholder-class='ipt_placeholder_style' placeholder='请输入手机号'>
+        </input>
+        <input class='iput_password_login' placeholder-class='ipt_placeholder_style' placeholder='请输入密码'>
+        </input>
+        
+      </view>
+      
+      <!-- 验证码登录 -->
+      <view wx:elif="{{panid==1}}" style='margin-top:68rpx'>
+        <input class='iput_telphone2' placeholder-class='ipt_placeholder_style'  placeholder='请输入手机号'>
+        </input>
+        <view class='rl_vcode_view'>
+          <input class='iput_vcode_login' placeholder-class='ipt_placeholder_style'  placeholder='请输入验证码'>        
+          </input>
+           <text class='tv_get_vcode'>获取验证码</text>
+        </view>
+        
+      </view>
+    </view>
+    <view class='tv_click'>
+
+      <text class='tv_vcode' bindtap='vcodelogin'>验证码登录</text>
+
+      <text class='tv_forget_psswd' bindtap='resetpswd'>忘记密码</text>
+
+    </view>
+
+    <button class='btn_login'>登录</button>
+  </view>
+</view>

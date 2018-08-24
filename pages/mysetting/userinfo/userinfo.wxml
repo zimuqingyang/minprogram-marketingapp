@@ -1,0 +1,62 @@
+<!--pages/mysetting/userinfo/userinfo.wxml-->
+<import src="../../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+
+<import src="../../../static/toast/toast.wxml" />
+<template is="toast" data="{{txt,txt2,isShow,iconClass}}"></template>
+
+
+
+<view class='root_view'>
+  
+  <view class='border_line'></view>
+  
+       <!-- 公司 -->
+      <view class='item_view' bindtap='toastShow'>
+        <view class='ite_details' >
+            <text class='tv_title'>公司名称</text>
+            <text class='tv_conent'>{{user_data.company}}</text>
+        </view>
+
+        <view class='border_line_thin'></view>
+      </view>
+      <!-- 职位 -->
+       <view class='item_view' bindtap='showError'>
+        <view class='ite_details' >
+            <text class='tv_title'>职位</text>
+            <text class='tv_conent'>{{user_data.post}}</text>
+        </view>
+
+        <view class='border_line_thin'></view>
+      </view>
+      <!-- 姓名 -->
+       <view class='item_view' bindtap='showError'>
+        <view class='ite_details' >
+            <text class='tv_title'>姓名</text>
+            <text class='tv_conent'>{{user_data.username}}</text>
+        </view>
+
+        <view class='border_line_thin'></view>
+      </view>
+      <!-- 手机号 -->
+       <view class='item_view' bindtap='showError'>
+        <view class='ite_details' >
+            <text class='tv_title'>手机号</text>
+            <text class='tv_conent'>{{user_data.phone}}</text>
+        </view>
+
+        <view class='border_line_thin'></view>
+      </view>
+      <!-- 性别 -->
+       <view class='item_view' bindtap='showError'>
+        <view class='ite_details' >
+            <text class='tv_title'>性别</text>
+            <text class='tv_conent'>{{user_data.sex}}</text>
+        </view>
+
+        <view class='border_line_thin'></view>
+      </view>
+  
+  
+</view>

@@ -1,0 +1,10 @@
+<!--pages/common/header.wxml-->
+<template name="navigationbar">
+  <view class="header">
+    <navigator class='nv' open-type='navigateBack'>
+      <image class="btn_back" wx:if="{{isshow}}" src='{{iv_path}}'></image>
+    </navigator>
+    <text class="header_text">{{header_title}}</text>
+  </view>
+  
+</template>

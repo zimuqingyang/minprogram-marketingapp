@@ -1,0 +1,26 @@
+<!--pages/mysetting/bill/bill.wxml-->
+<import src="../../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+<view class='root_view'>
+  <!-- 账单列表 -->
+  <view class='content_view' wx:for="{{level_data}}">
+       <!-- 年份 标题 -->
+       <view class='year_title'>
+       {{item}}
+       </view>
+      <!-- 年份详情  详情list -->
+       <view class='year_details_view' wx:for="{{list_data[index].datas}}" wx:for-index="idx" wx:for-item="itm" >
+        <view class='year_details__item_view'>
+          <view class='tv_date'>
+            {{itm.date}}
+            </view>
+            <view class='tv_doller'>
+            {{itm.doller}}
+            </view>
+        </view>
+        <view class='border_thin_lin'></view>
+       </view>
+  </view>
+
+</view>

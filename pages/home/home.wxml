@@ -1,0 +1,99 @@
+<!--pages/home/home.wxml-->
+<import src="../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+<scroll-view class="page_container">
+  <!-- 第一个面板，四个仪表盘 -->
+  <view class="first_pan">
+   <view class="first_pan_row">
+    
+      <view class="view_banner1" >
+        <navigator url="/pages/home/sttitem/sttitem?title=0">
+            <image mode="aspectFit" class="image" src="{{imgUrls[0]}}"></image>
+            <view class='tv_show_msg'>
+              <text class='tv_details'>{{dashbord_details[0]}}</text>
+              <text class='tv_title'>{{dashbord_titles[0]}}</text>
+            </view>
+        </navigator>
+      </view>
+      
+      <view class="view_banner2" >
+        <navigator url="/pages/home/sttitem/sttitem?title=1">
+            <image mode="aspectFit" class="image" src="{{imgUrls[1]}}"></image>
+             <view class='tv_show_msg'>
+              <text class='tv_details'>{{dashbord_details[1]}}</text>
+              <text class='tv_title'>{{dashbord_titles[1]}}</text>
+            </view>
+         </navigator>
+      </view>
+   </view>
+   <view class="first_pan_row">
+      <view class="view_banner1" >
+        <navigator url="/pages/home/sttitem/sttitem?title=2">
+           <image mode="aspectFit" class="image" src="{{imgUrls[2]}}"></image>
+             <view class='tv_show_msg'>
+              <text class='tv_details'>{{dashbord_details[2]}}</text>
+              <text class='tv_title'>{{dashbord_titles[2]}}</text>
+            </view>
+          </navigator>
+      </view>
+       <view class="view_banner2" >
+         <navigator url="/pages/home/sttitem/sttitem?title=3">
+           <image mode="aspectFit" class="image" src="{{imgUrls[3]}}"></image>
+             <view class='tv_show_msg'>
+              <text class='tv_details'>{{dashbord_details[3]}}</text>
+              <text class='tv_title'>{{dashbord_titles[3]}}</text>
+            </view>
+          </navigator>
+      </view>
+   </view>
+
+   <view class="container_preview">
+     <button  class="btn_preview" bindtap='to_sttdetails'>统计概览</button>
+   </view>
+
+<!-- 第二个面板 top5门店列表 -->
+   <view class='two_pan'>
+      <view class='two_pan_row'>  
+        <image class="li_icon" src='../../static/images/li_icon.png'></image>
+        <text class='tv_market_list'>Top5门店列表</text>
+      </view>
+      <view class='two_pan_chart'>
+        <ec-canvas wx:if="{{!isDisposed}}" id="mychart-dom-bar" canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+      </view>
+   </view>
+
+<!--第三个面板， 黑名单 -->
+   <view class="three_pan">
+     <view class='two_pan_row'>  
+        <image class="li_icon" src='../../static/images/black_icon-.png'></image>
+        <text class='tv_market_list'>黑名单</text>
+     </view>
+
+    <!-- todo ：
+     1. 只显示两个最新的黑名单——预定义俩itemview
+     2. 无限制显示黑名单list——自定义listview组件
+     -->
+     <view class='black_list'>
+        <view class='black_item'>
+           <image class='iv_user' mode='aspectFit' src="../../static/images/blackpeople.png"></image>
+           <view class='tv_user_details'>
+              <text class='tv_black_user'>到店访数:1</text>
+              <text class='tv_black_user'>访问次数:1</text>
+              <text class='tv_black_user'>最近访问时间：2018-02-02</text>
+           </view>
+        </view>
+        <view class='black_item'>
+           <image class='iv_user' mode='aspectFit' src="../../static/images/blackpeople.png"></image>
+           <view class='tv_user_details'>
+              <text class='tv_black_user'>到店访数:1</text>
+              <text class='tv_black_user'>访问次数:1</text>
+              <text class='tv_black_user'>最近访问时间：2018-02-02</text>
+           </view>
+        </view>
+     </view>
+   </view>
+  </view>
+
+</scroll-view>
+

@@ -1,0 +1,161 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.2.3",
+	"appid": "wx38d32982960a0766",
+	"projectname": "wxfengshi",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 17,
+			"list": [
+				{
+					"id": -1,
+					"name": "home",
+					"pathName": "pages/home/home",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "门店",
+					"pathName": "pages/outlet/outlet",
+					"query": "title=1"
+				},
+				{
+					"id": 2,
+					"name": "营销",
+					"pathName": "pages/marketing/marketing",
+					"query": "title=1"
+				},
+				{
+					"id": 3,
+					"name": "门店详情",
+					"pathName": "pages/outlet/details/details",
+					"query": "shopid=门店1号"
+				},
+				{
+					"id": -1,
+					"name": "发送时间",
+					"pathName": "pages/marketing/newmarket/newmarket",
+					"query": "title=1"
+				},
+				{
+					"id": -1,
+					"name": "新建营销",
+					"pathName": "pages/marketing/newmarket/newmarket",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "新建标签",
+					"pathName": "pages/marketing/newtime/newtime",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "新建标签",
+					"pathName": "pages/marketing/newtag/newtag",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "标签历史",
+					"pathName": "pages/marketing/taglist/taglist",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "标签历史",
+					"pathName": "pages/mysetting/mysetting",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "功能介绍",
+					"pathName": "pages/mysetting/aboutus/aboutus",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "关于我们",
+					"pathName": "pages/mysetting/aboutus/versiondetails/versiondetails",
+					"query": "versionid=1.0.1"
+				},
+				{
+					"id": -1,
+					"name": "帮助",
+					"pathName": "pages/mysetting/help/help",
+					"query": "versionid=1.0.1"
+				},
+				{
+					"id": -1,
+					"name": "userinfo",
+					"pathName": "pages/mysetting/userinfo/userinfo",
+					"query": "versionid=1.0.1"
+				},
+				{
+					"id": -1,
+					"name": "钱包",
+					"pathName": "pages/mysetting/wallet/wallet",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "充值",
+					"pathName": "pages/mysetting/refill/refill",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": " 详情",
+					"pathName": "pages/mysetting/bill/bill",
+					"query": ""
+				},
+				{
+					"id": 17,
+					"name": "登录",
+					"pathName": "pages/login/login",
+					"query": "?panid=0"
+				},
+				{
+					"id": -1,
+					"name": "重置密码",
+					"pathName": "pages/resetpswd/resetpswd",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "重置密码",
+					"pathName": "pages/home/sttitem/sttitem",
+					"query": ""
+				}
+			]
+		}
+	}
+}

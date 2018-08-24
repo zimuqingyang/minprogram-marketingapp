@@ -1,0 +1,14 @@
+<!--pages/mysetting/aboutus/versiondetails/versiondetails.wxml-->
+<import src="../../../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+<view class='root_view'>
+  <view class='border_line'></view>
+  <view class='content_view'> 
+    <image class="iv_logo" src='../../../../static/images/logo@2x.png' mode='aspectFit'></image>
+    <text class='tv_version_code'>{{version_code}}</text>
+    <text class='tv_version_msg'>功能介绍</text>
+    <view class='border_line_thin'></view>
+    
+  </view>
+</view>

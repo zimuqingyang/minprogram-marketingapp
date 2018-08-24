@@ -1,0 +1,54 @@
+<!--pages/mysetting/mysetting.wxml-->
+<import src="../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+<view class='root_view'>
+  <!-- 个人信息介绍 -->
+  <navigator url=''>
+    <view class='rl_user_details'>
+      <image  src="../../static/images/blackpeople.png" class="iv_user"></image>
+      <view class='tv_user_view'>
+        <text class='tv_name'>杨经理-采购经理</text>
+        <text class='tv_brand1'>崇文门店</text>
+        <text class='tv_brand2' >西安智能零售商超集团有限公司</text>
+      </view>
+    </view>
+  </navigator>
+  
+  <!-- app设置  -->
+  <view class='ll_setting'>
+    <!-- 钱包 -->
+    <navigator url='/pages/mysetting/wallet/wallet'>
+      <view class='first_row'>
+        <image class="iv_icon" src='../../static/images/money.png'> </image>
+        <text class='tv_icon'>钱包</text>
+      </view>
+    </navigator>
+
+    <view class='border_line'></view>
+    <!-- 帮助与反馈 -->
+     <navigator class='width:100%;height:100%' url='/pages/mysetting/help/help'>
+      <view class='first_row'>
+        <image class="iv_icon" src='../../static/images/feedback.png'> </image>
+        <text class='tv_icon'>帮助与反馈</text>
+      </view>
+     </navigator>
+    <view class='border_line'></view>
+    
+    <!-- 关于蜂视 -->
+    <navigator class='width:100%;height:100%' url='/pages/mysetting/aboutus/aboutus'>
+      <view class='first_row'>
+          <image class="iv_icon" src='../../static/images/about.png'> </image>
+          <text class='tv_icon'>关于金诚</text>
+      </view>
+    </navigator>
+    <view class='border_line'></view>
+
+    <navigator class='width:100%;height:100%' url='/pages/login/login?panid=0'>
+      <view class='first_row'>
+          <image class="iv_icon" src='../../static/images/about.png'> </image>
+          <text class='tv_icon'>测试登录</text>
+      </view>
+    </navigator>
+    <view class='border_line'></view>
+  </view>
+</view>

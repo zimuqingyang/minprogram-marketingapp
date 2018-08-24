@@ -1,0 +1,158 @@
+/* pages/home/home.wxss */
+@import "../../static/header/header.wxss";
+.page_container{
+  width: 100%;
+  height: 100%;
+  background-color: #e6e6e6;
+}
+.first_pan{
+display: flex;
+flex-direction: column;
+padding-top: 30rpx;
+padding-bottom: 30rpx;
+
+}
+
+.first_pan_row{
+  display: flex;
+  flex-direction: row;
+}
+
+.view_banner1{
+  width: 49%;
+  height: 164rpx;
+  margin-bottom: 20rpx;
+  margin-left: 30rpx;
+  position: relative;
+}
+
+.view_banner2{
+  width: 49%;
+  height: 164rpx;
+  margin-bottom: 20rpx;
+  margin-right: 30rpx;
+  position: relative;
+}
+.image{
+  width: 100%;
+  height: 164rpx;
+  position: absolute;
+}
+
+.tv_show_msg{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.tv_title{
+	font-size: 22rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+}
+
+.tv_details{
+  margin-top: 45rpx;
+  font-size: 42rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+}
+
+
+.container_preview{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+
+.btn_preview{
+  width: 100%;
+	height: 88rpx;
+	background-color: #4b77e5;
+	border-radius: 10rpx;
+  font-family: SourceHanSansCN-Regular;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+}
+
+.two_pan{
+  padding: 30rpx;
+  background-color: #ffffff;
+}
+
+.two_pan_row{
+  display: flex;
+  flex-direction: row;
+}
+
+.tv_market_list{
+  font-family: ArialMT;
+	font-size: 32rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 24rpx;
+	letter-spacing: 0rpx;
+	color: #333333;
+  margin-left: 15rpx;
+}
+.li_icon{
+  margin-top: 4rpx;
+  width: 28rpx;
+	height: 25rpx;
+
+}
+.two_pan_chart{
+  height: 360rpx;
+  margin-top: 15rpx;
+}
+
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.three_pan{
+  margin-top: 30rpx;
+  background-color: #ffffff;
+  padding: 30rpx;
+}
+
+.black_list{
+  margin-top: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.black_item{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30rpx;
+}
+
+.iv_user{
+  width: 150rpx;
+  height: 168rpx;
+}
+.tv_user_details{
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column
+}
+
+.tv_black_user{
+  font-size: 30rpx;
+  margin-top: 15rpx;
+}

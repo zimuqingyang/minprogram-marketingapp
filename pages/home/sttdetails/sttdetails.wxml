@@ -1,0 +1,50 @@
+<import src="../../../static/header/header.wxml"/>
+<template is="navigationbar" data="{{header_title:navigation_title,isshow:is_back,iv_path:iv_path}}"/>
+
+<view class="stv-container">
+  <view class="tab-bar">
+    <view wx:for="{{tabs}}" wx:key="unique" data-index=
+    "{{index}}" bindtap="handlerTabTap" class="tab {{activeTab==index?'tab-active':''}}" style="width: {{stv.windowWidth/tabs.length}}px">
+      <text>{{item}}</text>
+    </view>
+    <view style="width: {{stv.lineWidth}}px; left: {{stv.offset/tabs.length}}px" class="under-line {{!stv.tStart? 'withAnimate': ''}}"></view>
+  </view>
+  <view class="scroll-view">
+    <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd"  class="scroll-view-wrapper {{!stv.tStart? 'withAnimate': ''}}" style="left: -{{stv.offset}}px">
+      <view style="width: {{stv.windowWidth}}px;" wx:for="{{tabs}}" wx:key="index" wx:item="item" class="one-scene">
+        <scroll-view style="height:100%" scroll-y>
+            <!-- 近7日 -->
+            <view wx:if="{{index==0}}" class='last_7_datas_pan'>
+              <!-- 客流趋势 -->
+              <view class='first_pan'>
+                 <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec_line }}" class='chart_line_keliu'></ec-canvas>
+              </view>
+
+               <!-- 新老顾客 -->
+               <view class='two_pan'>
+                 <ec-canvas id="mychart-dom-line-user" canvas-id="mychart-line-user" ec="{{ ec_line_user }}" class='chart_line_user'></ec-canvas>
+              </view>
+
+              <!--到店时段  -->
+              <view class='three_pan'>
+                <view class='char_title'>到店时段</view>
+                <ec-canvas id="mychart-dom-bar-time"  class='chart_bar_time'  class='chart_bar_time' canvas-id="mychart-bar-time" ec="{{ ec_bar_time }} "></ec-canvas>
+              </view>
+                  
+               <!-- Top 5门店列表 -->
+              <view class='four_pan'>
+                <view class='char_title'>TOP5门店列表</view>
+                <ec-canvas id="mychart-dom-bar"  class='chart_bar' canvas-id="mychart-bar" ec="{{ ec }}"></ec-canvas>
+              </view>
+
+                  
+            </view>
+            <view wx:elif="{{index==1}}" class='last_15_datas_pan'>
+            <!-- 近15日 -->
+            aaa
+            </view>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+</view>
